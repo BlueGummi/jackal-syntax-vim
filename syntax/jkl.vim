@@ -2,28 +2,29 @@ if exists("b:current_syntax")
   finish
 endif
 
-" KEYWORDS
-
 syn keyword jklConditional     IF ELSE ELSEIF THEN END
 syn keyword jklLoop            WHILE FOR UNTIL LOOP DO BREAK
 syn keyword jklFunction        FN RETURN FNPTR 
+
 syn keyword jklDeclaration     STRUCT MACRO DEFINE INCLUDE ENUM
+
 syn keyword jklQualifier       IN OUT TO EXTERN CAST EXPORT
 syn keyword jklBoolean         TRUE FALSE NULLPTR NOT OR AND XOR
-syn keyword jklSpecial         CONTAINEROF
+syn keyword jklSpecial         CONTAINEROF GOTO SECTION
 syn keyword jklType            UWORD ULONG UBYTE LONG WORD BYTE 
 
 " POINTERS AND STRUCT ACCESS
 
 syn match   jklFieldAccess     /\<[A-Za-z_][A-Za-z0-9_]*\>\(\^\)\?\.\<[A-Za-z_][A-Za-z0-9_]*\>/
-syn match   jklPointerType     /\<\^[_a-zA-Z][_a-zA-Z0-9]*\>/
+syn match   jklPointerType     /\(^\)\+\ze\h/
 syn match   jklDerefOp         /[\^\.]/
 
 " IDENTIFIERS AND FUNCTIONS
 
+syn match   jklVarType         /:\s*\zs[a-zA-Z0-9_]\+/
 syn match   jklLabel           /^[A-Z][A-Za-z0-9_]*\s*/
 syn match   jklIdentifier      /\<[A-Za-z_][A-Za-z0-9_]*\>/
-
+syn match   jklAtLabel         /@\h\w*/
 
 syn match   jklFunctionCall    /\<[A-Za-z_][A-Za-z0-9_]*\>\ze\s*(/
 syn match   jklFunctionName    /FN\s\+\zs\w\+/
@@ -44,7 +45,6 @@ syn match   jklTypeSeparator   /:/
 syn match   jklOperator        /\(\/\%(\/\)\@!\|[$<>!=+\-*%&|]\)/
 syn match   jklDelimiter       /[()[\]{},]/
 syn match   jklAssignOp        /:=/
-syn match   jklVarType /\(:\s*\)\zs\<[A-Za-z_][A-Za-z0-9_]*\>/
 
 " MACROS AND DIRECTIVES
 
@@ -70,6 +70,7 @@ hi def link jklPointerType     Type
 hi def link jklDerefOp         Operator
 
 hi def link jklLabel           Label
+hi def link jklAtLabel         Label
 hi def link jklIdentifier      Identifier
 hi def link jklFieldAccess     Operator
 
