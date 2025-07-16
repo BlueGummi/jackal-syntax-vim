@@ -8,7 +8,7 @@ syn keyword jklConditional     IF ELSE ELSEIF THEN END
 syn keyword jklLoop            WHILE FOR UNTIL LOOP DO BREAK
 syn keyword jklFunction        FN RETURN FNPTR 
 syn keyword jklDeclaration     STRUCT MACRO DEFINE INCLUDE ENUM
-syn keyword jklQualifier       IN OUT TO EXTERN CAST
+syn keyword jklQualifier       IN OUT TO EXTERN CAST EXPORT
 syn keyword jklBoolean         TRUE FALSE NULLPTR NOT OR AND XOR
 syn keyword jklSpecial         CONTAINEROF
 syn keyword jklType            UWORD ULONG UBYTE LONG WORD BYTE 
