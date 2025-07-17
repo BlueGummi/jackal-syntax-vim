@@ -10,7 +10,7 @@ syn keyword jklDeclaration     STRUCT MACRO DEFINE INCLUDE ENUM
 
 syn keyword jklQualifier       IN OUT TO EXTERN CAST EXPORT
 syn keyword jklBoolean         TRUE FALSE NULLPTR NOT OR AND XOR
-syn keyword jklSpecial         CONTAINEROF GOTO SECTION NOTHING BARRIER
+syn keyword jklSpecial         CONTAINEROF GOTO SECTION NOTHING BARRIER INSERTASM
 syn keyword jklType            UWORD ULONG UBYTE LONG WORD BYTE 
 
 " POINTERS AND STRUCT ACCESS
@@ -31,7 +31,7 @@ syn match   jklFunctionName    /FN\s\+\zs\w\+/
 
 " CONSTANTS, STRINGS, NUMBERS
 
-syn match   jklNumber          /\<[0-9]\+\>/
+syn match   jklNumber          /\<\%(0[xX][0-9A-Fa-f]\+\|0[bB][01]\+\|0[oO]\=\o\+\|[1-9][0-9]*\|0\)\>/
 syn region  jklString          start=/"/ skip=/\\"/ end=/"/
 syn match   jklChar            /'\(\\.\|[^']\)'/
 
