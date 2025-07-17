@@ -10,7 +10,7 @@ syn keyword jklDeclaration     STRUCT MACRO DEFINE INCLUDE ENUM
 
 syn keyword jklQualifier       IN OUT TO EXTERN CAST EXPORT
 syn keyword jklBoolean         TRUE FALSE NULLPTR NOT OR AND XOR
-syn keyword jklSpecial         CONTAINEROF GOTO SECTION
+syn keyword jklSpecial         CONTAINEROF GOTO SECTION NOTHING BARRIER
 syn keyword jklType            UWORD ULONG UBYTE LONG WORD BYTE 
 
 " POINTERS AND STRUCT ACCESS
