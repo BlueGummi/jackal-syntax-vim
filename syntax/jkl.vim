@@ -48,7 +48,7 @@ syn match   jklAssignOp        /:=/
 
 " MACROS AND DIRECTIVES
 
-syn match   jklMacro           /#\(DEFINE\|MACRO\|INCLUDE\|IF\|ELSE\|END\)/
+syn match   jklMacro           /#\(DEFINE\|MACRO\|INCLUDE\|IF\|ELSE\|END\|ASM\)/
 
 " Match ALL CAPS identifiers not already matched
 syn match jklConstant /\<[A-Z_][A-Z0-9_]*\>/
