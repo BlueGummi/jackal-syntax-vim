@@ -48,7 +48,7 @@ syn match   jklAssignOp        /:=/
 
 " MACROS AND DIRECTIVES
 
-syn match   jklMacro           /#\(DEFINE\|MACRO\|INCLUDE\)/
+syn match   jklMacro           /#\(DEFINE\|MACRO\|INCLUDE\|IF\|ELSE\|END\)/
 
 " HIGHLIGHT LINKS
 
