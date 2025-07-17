@@ -50,8 +50,12 @@ syn match   jklAssignOp        /:=/
 
 syn match   jklMacro           /#\(DEFINE\|MACRO\|INCLUDE\|IF\|ELSE\|END\)/
 
+" Match ALL CAPS identifiers not already matched
+syn match jklConstant /\<[A-Z_][A-Z0-9_]*\>/
+
 " HIGHLIGHT LINKS
 
+hi def link jklConstant Constant
 hi def link jklConditional     Conditional
 hi def link jklLoop            Repeat
 hi def link jklFunction        Function
