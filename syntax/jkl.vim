@@ -6,11 +6,11 @@ syn keyword jklVisibility      PUBLIC
 
 syn keyword jklControlOp       FN RETURN FNPTR LEAVE DO BREAK CONTINUE UNTIL WHILE FOR LOOP IF ELSE ELSEIF GOTO THEN END 
 
-syn keyword jklQualifier       IN OUT TO EXTERN CAST EXPORT STRUCT ENUM UNION 
+syn keyword jklTypeDefinition  IN OUT TO EXTERN CAST EXPORT STRUCT ENUM UNION TYPE
 syn keyword jklBoolean         TRUE FALSE NULLPTR NOT OR AND XOR
 syn keyword jklType            UWORD ULONG UBYTE LONG WORD BYTE VOID
 syn keyword jklOperatorKeyword SIZEOF CONTAINEROF
-syn keyword jklSpecial         STRCMP BARRIER INSERTASM NOTHING
+syn keyword jklSpecial         ARCHITECTURE PLATFORM STRCAT STRCMP BARRIER INSERTASM NOTHING
 
 " POINTERS AND STRUCT ACCESS
 
@@ -47,7 +47,7 @@ syn match   jklAssignOp        /:=/
 
 " MACROS AND DIRECTIVES
 
-syn match   jklMacro           /#\(MACRO\|INCLUDE\|IF\|ELSE\|END\|ASM\|DEFINE\|SECTION\)/
+syn match   jklMacro           /#\(MACRO\|INCLUDE\|ERROR\|ELSEIF\|IF\|ELSE\|END\|ASM\|DEFINE\|SECTION\)/
 
 " Match ALL CAPS identifiers not already matched
 syn match jklConstant /\<[A-Z_][A-Z0-9_]*\>/
@@ -59,8 +59,8 @@ hi def link jklVisibility      Conditional
 hi def link jklFunctionCall    Function
 hi def link jklFunctionName    Identifier
 hi def link jklControlOp       Keyword 
-hi def link jklQualifier       Keyword
-hi def link jklBoolean         Boolean
+hi def link jklTypeDefinition  Keyword
+hi def link jklBoolean         Conditional 
 hi def link jklLogic           Keyword
 
 hi def link jklVarType         Type
