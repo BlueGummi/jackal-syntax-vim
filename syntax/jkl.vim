@@ -2,15 +2,17 @@ if exists("b:current_syntax")
   finish
 endif
 
-syn keyword jklConditional     IF ELSE ELSEIF THEN END
-syn keyword jklLoop            WHILE FOR UNTIL LOOP DO BREAK CONTINUE
+syn keyword jklConditional     THEN END 
+syn keyword jklVisibility      PUBLIC
 
-syn keyword jklDeclaration     STRUCT MACRO DEFINE INCLUDE ENUM
+syn keyword jklControlOp       FN RETURN FNPTR LEAVE DO BREAK CONTINUE UNTIL WHILE FOR LOOP IF ELSE ELSEIF GOTO
+syn keyword jklDeclaration     STRUCT MACRO INCLUDE ENUM
 
-syn keyword jklQualifier       IN OUT TO EXTERN CAST EXPORT
+syn keyword jklQualifier       IN OUT TO EXTERN CAST EXPORT 
 syn keyword jklBoolean         TRUE FALSE NULLPTR NOT OR AND XOR
-syn keyword jklSpecial         CONTAINEROF GOTO SECTION NOTHING BARRIER INSERTASM SIZEOF FN FNPTR RETURN
+syn keyword jklSpecial         NOTHING BARRIER INSERTASM BARRIER INSERTASM 
 syn keyword jklType            UWORD ULONG UBYTE LONG WORD BYTE VOID
+syn keyword jklOperatorKeyword SIZEOF CONTAINEROF
 
 " POINTERS AND STRUCT ACCESS
 
@@ -47,7 +49,7 @@ syn match   jklAssignOp        /:=/
 
 " MACROS AND DIRECTIVES
 
-syn match   jklMacro           /#\(DEFINE\|MACRO\|INCLUDE\|IF\|ELSE\|END\|ASM\)/
+syn match   jklMacro           /#\(MACRO\|INCLUDE\|IF\|ELSE\|END\|ASM\|DEFINE\|SECTION\)/
 
 " Match ALL CAPS identifiers not already matched
 syn match jklConstant /\<[A-Z_][A-Z0-9_]*\>/
@@ -56,9 +58,10 @@ syn match jklConstant /\<[A-Z_][A-Z0-9_]*\>/
 
 hi def link jklConstant Constant
 hi def link jklConditional     Conditional
-hi def link jklLoop            Repeat
+hi def link jklVisibility      Conditional
 hi def link jklFunctionCall    Function
 hi def link jklFunctionName    Identifier
+hi def link jklControlOp       Keyword 
 hi def link jklDeclaration     Statement
 hi def link jklQualifier       Keyword
 hi def link jklBoolean         Boolean
@@ -82,9 +85,10 @@ hi def link jklString          String
 
 hi def link jklComment         Comment
 hi def link jklOperator        Operator
+hi def link jklOperatorKeyword Operator
 hi def link jklDelimiter       Delimiter
 hi def link jklAssignOp        Operator
-hi def link jklMacro           Macro
+hi def link jklMacro           Keyword 
 
 let b:current_syntax = "jkl"
 
