@@ -10,9 +10,8 @@ syn keyword jklDeclaration     STRUCT MACRO INCLUDE ENUM
 
 syn keyword jklQualifier       IN OUT TO EXTERN CAST EXPORT 
 syn keyword jklBoolean         TRUE FALSE NULLPTR NOT OR AND XOR
-syn keyword jklSpecial         NOTHING BARRIER INSERTASM BARRIER INSERTASM 
 syn keyword jklType            UWORD ULONG UBYTE LONG WORD BYTE VOID
-syn keyword jklOperatorKeyword SIZEOF CONTAINEROF
+syn keyword jklOperatorKeyword SIZEOF CONTAINEROF STRCMP BARRIER INSERTASM NOTHING
 
 " POINTERS AND STRUCT ACCESS
 
@@ -66,7 +65,6 @@ hi def link jklDeclaration     Statement
 hi def link jklQualifier       Keyword
 hi def link jklBoolean         Boolean
 hi def link jklLogic           Keyword
-hi def link jklSpecial         Keyword
 
 hi def link jklVarType         Type
 hi def link jklTypeSeparator   Type
