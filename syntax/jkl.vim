@@ -3,7 +3,7 @@ if exists("b:current_syntax")
 endif
 
 syn keyword jklConditional     IF ELSE ELSEIF THEN END
-syn keyword jklLoop            WHILE FOR UNTIL LOOP DO BREAK
+syn keyword jklLoop            WHILE FOR UNTIL LOOP DO BREAK CONTINUE
 
 syn keyword jklDeclaration     STRUCT MACRO DEFINE INCLUDE ENUM
 
