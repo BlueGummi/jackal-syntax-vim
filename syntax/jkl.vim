@@ -4,14 +4,13 @@ endif
 
 syn keyword jklConditional     IF ELSE ELSEIF THEN END
 syn keyword jklLoop            WHILE FOR UNTIL LOOP DO BREAK
-syn keyword jklFunction        FN RETURN FNPTR 
 
 syn keyword jklDeclaration     STRUCT MACRO DEFINE INCLUDE ENUM
 
 syn keyword jklQualifier       IN OUT TO EXTERN CAST EXPORT
 syn keyword jklBoolean         TRUE FALSE NULLPTR NOT OR AND XOR
-syn keyword jklSpecial         CONTAINEROF GOTO SECTION NOTHING BARRIER INSERTASM SIZEOF
-syn keyword jklType            UWORD ULONG UBYTE LONG WORD BYTE 
+syn keyword jklSpecial         CONTAINEROF GOTO SECTION NOTHING BARRIER INSERTASM SIZEOF FN FNPTR RETURN
+syn keyword jklType            UWORD ULONG UBYTE LONG WORD BYTE VOID
 
 " POINTERS AND STRUCT ACCESS
 
@@ -58,7 +57,6 @@ syn match jklConstant /\<[A-Z_][A-Z0-9_]*\>/
 hi def link jklConstant Constant
 hi def link jklConditional     Conditional
 hi def link jklLoop            Repeat
-hi def link jklFunction        Function
 hi def link jklFunctionCall    Function
 hi def link jklFunctionName    Identifier
 hi def link jklDeclaration     Statement
