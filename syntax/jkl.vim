@@ -6,9 +6,8 @@ syn keyword jklConditional     THEN END
 syn keyword jklVisibility      PUBLIC
 
 syn keyword jklControlOp       FN RETURN FNPTR LEAVE DO BREAK CONTINUE UNTIL WHILE FOR LOOP IF ELSE ELSEIF GOTO
-syn keyword jklDeclaration     STRUCT MACRO INCLUDE ENUM
 
-syn keyword jklQualifier       IN OUT TO EXTERN CAST EXPORT 
+syn keyword jklQualifier       IN OUT TO EXTERN CAST EXPORT STRUCT ENUM UNION 
 syn keyword jklBoolean         TRUE FALSE NULLPTR NOT OR AND XOR
 syn keyword jklType            UWORD ULONG UBYTE LONG WORD BYTE VOID
 syn keyword jklOperatorKeyword SIZEOF CONTAINEROF STRCMP BARRIER INSERTASM NOTHING
@@ -61,7 +60,6 @@ hi def link jklVisibility      Conditional
 hi def link jklFunctionCall    Function
 hi def link jklFunctionName    Identifier
 hi def link jklControlOp       Keyword 
-hi def link jklDeclaration     Statement
 hi def link jklQualifier       Keyword
 hi def link jklBoolean         Boolean
 hi def link jklLogic           Keyword
