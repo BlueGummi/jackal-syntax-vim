@@ -2,10 +2,9 @@ if exists("b:current_syntax")
   finish
 endif
 
-syn keyword jklConditional     THEN END 
 syn keyword jklVisibility      PUBLIC
 
-syn keyword jklControlOp       FN RETURN FNPTR LEAVE DO BREAK CONTINUE UNTIL WHILE FOR LOOP IF ELSE ELSEIF GOTO
+syn keyword jklControlOp       FN RETURN FNPTR LEAVE DO BREAK CONTINUE UNTIL WHILE FOR LOOP IF ELSE ELSEIF GOTO THEN END 
 
 syn keyword jklQualifier       IN OUT TO EXTERN CAST EXPORT STRUCT ENUM UNION 
 syn keyword jklBoolean         TRUE FALSE NULLPTR NOT OR AND XOR
@@ -55,7 +54,6 @@ syn match jklConstant /\<[A-Z_][A-Z0-9_]*\>/
 " HIGHLIGHT LINKS
 
 hi def link jklConstant Constant
-hi def link jklConditional     Conditional
 hi def link jklVisibility      Conditional
 hi def link jklFunctionCall    Function
 hi def link jklFunctionName    Identifier
