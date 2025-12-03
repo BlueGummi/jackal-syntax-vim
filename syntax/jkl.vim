@@ -9,7 +9,8 @@ syn keyword jklControlOp       FN RETURN FNPTR LEAVE DO BREAK CONTINUE UNTIL WHI
 syn keyword jklQualifier       IN OUT TO EXTERN CAST EXPORT STRUCT ENUM UNION 
 syn keyword jklBoolean         TRUE FALSE NULLPTR NOT OR AND XOR
 syn keyword jklType            UWORD ULONG UBYTE LONG WORD BYTE VOID
-syn keyword jklOperatorKeyword SIZEOF CONTAINEROF STRCMP BARRIER INSERTASM NOTHING
+syn keyword jklOperatorKeyword SIZEOF CONTAINEROF
+syn keyword jklSpecial         STRCMP BARRIER INSERTASM NOTHING
 
 " POINTERS AND STRUCT ACCESS
 
@@ -83,6 +84,7 @@ hi def link jklOperatorKeyword Operator
 hi def link jklDelimiter       Delimiter
 hi def link jklAssignOp        Operator
 hi def link jklMacro           Keyword 
+hi def link jklSpecial         Macro 
 
 let b:current_syntax = "jkl"
 
